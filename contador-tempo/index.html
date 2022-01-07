@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporizador B-Day!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="texts">
+    <h1 id="text-top">Insira um nome e data de nascimento</h1>
+    <h3 id="text-subtop">Mate sua curiodade, veja quanto tempo falta para seu próximo aniversário!</h3>
+
+    <div class="counter-container">
+      <div class="counter-el dias-container">
+        <p class="text-container" id="value-days"></p>
+        <span class="text-container" id="text-days"></span>
+      </div>
+      <div class="counter-el">
+        <p class="text-container" id="value-hours"></p>
+        <span class="text-container" id="text-hours"></span>
+      </div>
+      <div class="counter-el">
+        <p class="text-container" id="value-minutes"></p>
+        <span class="text-container" id="text-minutes"></span>
+      </div>
+      <div class="counter-el">
+        <p class="text-container" id="value-seconds"></p>
+        <span class="text-container" id="text-seconds"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="informations">
+    <div class="name-information">
+      <form class="form-pattern">
+        <label class="label-pattern" for="nameSecondName">Digite como queira ser chamado(a)</label>
+        <input type="text" id="name-user" class="input-pattern" placeholder="Seu nome completo" required>
+      </form>
+    </div>
+
+    <div class="birthday-information">
+      <form class="form-pattern">
+        <label class="label-pattern" for="dateBirthday">Data Nascimento (ex: 18/02/1994)</label>
+        <input type="date" id="date-to-calculate" class="input-pattern" required>
+      </form>
+    </div>
+
+    <div class="button-calculate">
+      <button>Calcular!</button>
+    </div>
+  </section>
+
+  <script src="count-down-date.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url('/bday-bg.jpg');
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+.texts, .informations{
+  width: 100%;
+}
+
+.informations {
+  margin-top: calc(100% - 85%);
+}
+
+h1{
+  font-size: 3em;
+  margin-bottom: .4em;
+  text-align: center;
+}
+
+h3{
+  font-size: 1.8em;
+  margin-top: 0;
+  text-align: center;
+}
+
+.counter-container{
+  display: flex;
+  justify-content: center;
+}
+
+.text-container{
+  font-weight: bold;
+  margin: 0 2rem;
+  font-size: 3em;
+  line-height: 1;
+}
+
+.counter-el {
+  text-align: center;
+}
+
+.counter-el span{
+  font-size: 1.5rem;
+}
+
+.name-information, .birthday-information, .form-pattern {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-pattern{
+  margin-left: 1.2em;
+}
+
+.button-calculate {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+.button-calculate button{
+  width: 300px;
+  height: 40px;
+  border: 2px none;
+  border-radius: 10px;
+  background-color: khaki;
+  font-size: 27px;
+}
+.button-calculate button:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
