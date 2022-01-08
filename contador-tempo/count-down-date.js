@@ -17,7 +17,7 @@
 
   var setCountdownTimer;
 
-  var totalSeconds;
+  var totalMiliSeconds;
 
   const today = new Date();
 
@@ -27,6 +27,7 @@
 
   var age;
 
+//start button clcked
   startButton.addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -57,7 +58,7 @@
       var bDayThisYear = new Date(today.getFullYear(), monthBday - 1, dateBDay);
       if (bDayThisYear <= today) {yearToday += 1}; //hear is necessary add 1 year to say that the next birthday is just on the next year.
 
-      if ((monthToday == monthBday && dateToday == dateBDay) || totalSeconds < 0) {
+      if ((monthToday == monthBday && dateToday == dateBDay) || totalMiliSeconds < 0) {
         clearInterval(setCountdownTimer)
         yearToday -= 1;
         celebrateBDay(yearBday, monthBday, nameUser);
@@ -96,22 +97,22 @@
     monthBday = parseInt(monthBday);
     yearBday = yearBday;
 
-    if(totalSeconds <= 200){
-      clearInterval(setCountdownTimer);
-      setTimeout(() => {celebrateBDay(yearBday, monthBday, nameUser)}, 1200);
-      celebrateBDay(yearBday, monthBday, nameUser);
-    } 
+    // if(totalMiliSeconds <= 200){
+    //   clearInterval(setCountdownTimer);
+    //   setTimeout(() => {celebrateBDay(yearBday, monthBday, nameUser)}, 1200);
+    //   celebrateBDay(yearBday, monthBday, nameUser);
+    // } 
 
     var dateNextBirthday = new Date(yearToday, (monthBday - 1), dateBDay);
     var todayToCalculate = new Date();
 
-    totalSeconds = 0;
-    totalSeconds = (dateNextBirthday - todayToCalculate) / 1000;
+    totalMiliSeconds = 0;
+    totalMiliSeconds = (dateNextBirthday - todayToCalculate) / 1000;
 
-    var days = Math.floor(totalSeconds / 3600 / 24);
-    var hours = Math.floor(totalSeconds / 3600) % 24;
-    var minutes = Math.floor(totalSeconds / 60) % 60;
-    var seconds = Math.floor(totalSeconds) % 60;
+    var days = Math.floor(totalMiliSeconds / 3600 / 24);
+    var hours = Math.floor(totalMiliSeconds / 3600) % 24;
+    var minutes = Math.floor(totalMiliSeconds / 60) % 60;
+    var seconds = Math.floor(totalMiliSeconds) % 60;
 
     valueDaysEl.textContent = days < 10 ? '0' + days : days;
     valueHoursEl.textContent = hours < 10 ? '0' + hours : hours;
